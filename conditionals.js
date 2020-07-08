@@ -16,43 +16,45 @@ console.log("------------------- Challenge 1 -------------------")
     Prompt the user to enter their age.
     Write conditional statements that print out whether you can drive in your city. */
 
+let msg = "";
+msg = READLINE.question("Age? ");
+console.log("My age is " + msg);
 
-
-
-
-
-
-
-
-
-
+if (msg >= 16) {
+  console.log("You can drive!");
+} else {
+  console.log("Sorry You are not old enough!");
+}
 
 
 /* -------------------------------------------- */
 
-console.log("------------------- Challenge 2 -------------------") 
+console.log("------------------- Challenge 2 -------------------"); 
 
 /* Who placed first?
     Write conditional statements that checks which is the highest and prints the highest score. 
     Hint: Create three variables and assign them random scores. */
 
+let var1 = 123;
+let var2 = 2312;
+let var3 = 23111;
 
-
-
-
-
-
-
-
-
+if (var1 > var2 && var1 > var3) {
+  console.log(var1);
+} else if (var2 > var3 && var2 > var1) {
+  console.log(var2);
+} else {
+  console.log(var3);
+}
 
 /* -------------------------------------------- */
 
-console.log("------------------- Challenge 3 -------------------")
+console.log("------------------- Challenge 3 -------------------");
 
 /* One of the most common parts of our daily routine is checking the weather. 
    Our outfit and accessories are dependent on the temperature and conditions outside. 
    ie. We're probably not going to wear shorts out when it's snowing...
+
 
 
 **** Challenge 3: Part 1 ****
@@ -62,19 +64,24 @@ console.log("------------------- Challenge 3 -------------------")
    Sunny: Wear a hat and sunglasses
    Snowing: Wear gloves and a scarf */
 
+   console.log("-------------- Challenge 3 Problem 1 -------------");
+
 //Here's a variable to get you started:
-let weather = `rainy`;
+let weather1 = `rainy`;
 
+let m = "";
+m = READLINE.question("What is the weather today? ");
+console.log("The weather is " + m);
 
-
-
-
-
-
-
-
-
-
+if (m == 'rainy') {
+  console.log("Bring an umbrella");
+} else if (m == 'sunny') {
+  console.log("Wear a hat and sunglasses");
+} else if (m == 'snowing') {
+  console.log("Wear gloves and scarf");
+} else {
+  console.log("Nothing IDEK, Just try something else.");
+}
 
 
 //Tip: Try changing the value of the weather variable to test your other conditions.
@@ -91,15 +98,24 @@ let weather = `rainy`;
    Hint: You will need another variable to keep track of the temperature.
 */
 
+console.log("-------------- Challenge 3 Problem 2 -------------");
 
 
+//let weather2 = "";
+weather2 = READLINE.question("What is the weather today? ");
+console.log("The weather is " + weather2);
+weather3 = READLINE.question("What is the temperature? ");
+console.log("The temperature is " + weather3);
 
-
-
-
-
-
-
+if ((weather2 == 'rainy') && (weather3 >= '0' && weather3 <= '30')) {
+  console.log("Get some thick clothing and stay INSIDE!!");
+} else if ((weather2 == 'rainy') && (weather3 >= '31' && weather3 <= '60')) {
+  console.log("Get some layers off and you can go outside, but remember the umbrella");
+} else if ((weather2 == 'rainy') && (weather3 >= '61' && weather3 <= '90')) {
+  console.log("You can wear anything, but get an umbrella, because it's raining boysss!!");
+} else {
+  console.log("Those aren't the options please choose something else!!!");
+}
 
 /* -------------------------------------------- */
 
@@ -112,13 +128,26 @@ console.log("------------------- Challenge 4 -------------------")
 
 
 
+daysOfWeek = READLINE.question("What day of the week is it? ");
+console.log("Today is " + daysOfWeek);
 
-
-
-
-
-
-
+if (daysOfWeek == "1") {
+  console.log("Today is Monday!");
+} else if (daysOfWeek == "2") {
+  console.log("Today is Tuesday");
+} else if (daysOfWeek == "3") {
+  console.log("Today is Wednesday!");
+} else if (daysOfWeek == "4") {
+  console.log("Today is Thursday!");
+} else if (daysOfWeek == "5") {
+  console.log("Today is Friday!");
+} else if (daysOfWeek == "6") {
+   console.log("Today is Saturday!");
+} else if (daysOfWeek == "7") {
+  console.log("Today is Sunday!");
+} else {
+  console.log("Those aren't the options please choose something else!!!");
+}
 
 /* -------------------------------------------- */
 
@@ -138,9 +167,19 @@ console.log("------------------- Challenge 1 -------------------")
   Your challenge is to translate the steps above into conditionals which will evaluate if the 
   year stored in a variable is/was a leap year.*/
 
+let year = 2020;
 
-
-
-
-
-
+if (year % 4 == 0) {
+  if (year % 100 == 0) {
+    if (year % 400 == 0) {
+      console.log("366 days! It's a leap year!!");
+    } else {
+      console.log("Not a leap year!");
+    }
+    
+  } else {
+    console.log("It's a Leap Year!!");
+  }
+} else {
+  console.log("It's not a leap year");
+}
