@@ -26,7 +26,6 @@ if (msg >= 16) {
   console.log("Sorry You are not old enough!");
 }
 
-
 /* -------------------------------------------- */
 
 console.log("------------------- Challenge 2 -------------------"); 
@@ -55,8 +54,6 @@ console.log("------------------- Challenge 3 -------------------");
    Our outfit and accessories are dependent on the temperature and conditions outside. 
    ie. We're probably not going to wear shorts out when it's snowing...
 
-
-
 **** Challenge 3: Part 1 ****
    Write a conditional statement that checks the value of the weather variable 
    and prints out a weather report based on the current weather:
@@ -80,7 +77,7 @@ if (m == 'rainy') {
 } else if (m == 'snowing') {
   console.log("Wear gloves and scarf");
 } else {
-  console.log("Nothing IDEK, Just try something else.");
+  console.log("Nothing IDEK, just try something else.");
 }
 
 
@@ -100,8 +97,6 @@ if (m == 'rainy') {
 
 console.log("-------------- Challenge 3 Problem 2 -------------");
 
-
-//let weather2 = "";
 weather2 = READLINE.question("What is the weather today? ");
 console.log("The weather is " + weather2);
 weather3 = READLINE.question("What is the temperature? ");
@@ -127,7 +122,6 @@ console.log("------------------- Challenge 4 -------------------")
     Make sure to add a statement that accounts of any numbers out of range! */
 
 
-
 daysOfWeek = READLINE.question("What day of the week is it? ");
 console.log("Today is " + daysOfWeek);
 
@@ -151,7 +145,7 @@ if (daysOfWeek == "1") {
 
 /* -------------------------------------------- */
 
-console.log("------------------- Challenge 1 -------------------")
+console.log("------------------- Challenge 1 -------------------");
 
 /* A leap year is a calendar year that contains an additional day added 
     to keep the calendar year synchronized with the astronomical year or seasonal year.
@@ -176,7 +170,6 @@ if (year % 4 == 0) {
     } else {
       console.log("Not a leap year!");
     }
-    
   } else {
     console.log("It's a Leap Year!!");
   }
