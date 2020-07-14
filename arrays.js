@@ -35,22 +35,25 @@ console.log("names: " + names)
 // **** Challenge 1 : Part 1 **** 
 // Given an array named food, fill the array with 5 strings.
 
-let food = []
+let food = ["apples", "avocado", "bread", "chocolate", "oreos"];
 console.log("food: " + food)  
 
 
 // **** Challenge 1 : Part 2 **** 
 // Declare an array named numbers with 5 numbers.
 
-
-console.log("numbers: " + numbers)   
+let numbers = [1, 2, 3, 4, 5];
+console.log("numbers: " + numbers);   
 
 
 // **** Challenge 1 : Part 3 **** 
 // Declare and log two more arrays with anything you want. 
 
+let boyGroups = ["Stray Kids", "NCT", "SuperM", "Pentagon", "EXO"]
+console.log("Boy Groups: " + boyGroups);
 
-
+let girlGroups = ["ITZY", "Blackpink", "Loona", "Red Velvet", "Twice"];
+console.log("Girl Groups: " + girlGroups);
 
 
 /* -------------------------------------------- 
@@ -64,16 +67,21 @@ console.log("The first name is " + names[0]);
 
 
 // **** Challenge 2 : Part 1 **** 
-// Log the name of the person from your food array you spoke to last.
+// Log the name of the person from your names array you spoke to last.
 
+let coachAlex = names[2];
 
-
+console.log("The name of the last Coach I spoke to last is " + coachAlex);
 
 // **** Challenge 2 : Part 2 **** 
 // Log the first AND last elements of any array you made.
 
+let bestGroup = boyGroups[0];
+console.log("The best K-Pop group is " + bestGroup);
 
+let bbyGroup = girlGroups[4];
 
+console.log("Jackson's favorite group is " + bbyGroup);
 
 /* -------------------------------------------- 
 Challenge 3: Modifying Data in Arrays
@@ -89,12 +97,12 @@ console.log(names)
 // **** Challenge 3 : Part 1 **** 
 // Update all values of your food array with new food items that you're craving.
 
+food = ["strawberries", "ribs", "soup"];
 
 
 
 
-
-// Example: The code below uses the timesTen function to multiply the first element in our array by 10:
+/*// Example: The code below uses the timesTen function to multiply the first element in our array by 10:
 numbers[0] = timesTen(numbers[0])
 console.log(numbers)
 
@@ -106,7 +114,14 @@ function timesTen(number){
 // **** Challenge 3 : Part 2 **** 
 // Write a function that multiplies a number by 1000 and log the array. 
 
+numbers[0] = timesThousand(numbers[1000]);
+console.log(numbers);
 
+function timesThousand(number) {
+    timesThousand = number * 1000;
+
+    return timesThousand
+}*/
 
 
 
@@ -128,7 +143,9 @@ console.log("Current Program Offerings: " + programs);
 // Declare a new array named 'orders' and store the food and numbers arrays in it. Log the orders array.
 
 
+let orders = [food, numbers];
 
+console.log("The food and numbers are " + orders);
 
 
 
@@ -151,7 +168,10 @@ console.log("Movies now has: " + movies)
 // Add 2 more food items and numbers using .push() to the food and numbers arrays respectively. Log both arrays before and after adding new values.
 
 
+food.push("cake", "chocolate", "pasta");
+console.log("food" + food)
 
+numbers.push("6, 7")
 
 
 // Example: Elements can also be removed from an array using .pop(), which removes the last element. 
@@ -159,7 +179,7 @@ console.log("Movies now has: " + movies)
 let cities = ["New York", "Oakland", "Las Vegas", "Topeka"]
 console.log("Cities: " + cities)
 let removedCity = cities.pop()
-console.log("Removed City: " + unwantedCity)
+console.log("Removed City: " + removedCity)
 
 
 // **** Challenge 5 : Part 2 **** 
