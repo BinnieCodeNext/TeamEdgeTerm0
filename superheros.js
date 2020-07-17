@@ -27,7 +27,7 @@ const LIVES_BOTTOM_RANGE = 40
 let rounds = 1
 let gameIsOn = true
 
-//COMMENT 1: 
+//COMMENT 1: This block of code is the whole Superhero class, it uses atributes to define itself
 class Superhero {
 
     constructor(name, isAlive, friends, hitPoints, isGood , attackPower) {
@@ -40,7 +40,7 @@ class Superhero {
        
      } attack(enemy){
         
-        //COMMENT 2 ....
+        //COMMENT 2 .... This block of code is used to check if both characters are alive and, if so the hero will inflict damage to the enemy
         if(this.isAlive && enemy.isAlive){  
           
             console.log("  \n   ")
@@ -53,13 +53,13 @@ class Superhero {
                  
             }
 
-             //COMMENT 3....  
+             //COMMENT 3....  This block of code: 1st: picks random taunt and uses against enemy 2nd: inflicts a random number for damage to the enemy.
             console.log(`${this.name} 💬 : ${this.taunts[randomInteger(0,this.taunts.length-1)]} \n`)
             console.log(`${this.name}  💥X ${damage} ${enemy.name}  ${enemy.lives} : ${enemy.lives.length} \n`)
 
             if(enemy.lives.length <= 0){
                
-                //COMMENT 4....
+                //COMMENT 4.... This block of code checks if the enemy is dead, if it is then it would print, "Game Over", and ends the game
                 enemy.isAlive=false
                 gameIsOn =false
                 console.log(`💀💀💀💀💀💀 ${enemy.name} has been slain!!! 💀💀💀💀💀 `)
@@ -81,7 +81,7 @@ class Superhero {
      }
 
      fillHealth(){
-          //COMMENT 5....
+          //COMMENT 5....This block of code generates a number from the range of 40 and 60, and if so it would push that many hearts.
           let amt = randomInteger(LIVES_BOTTOM_RANGE, LIVES_TOP_RANGE)
            
             for(let i = 0; i <= amt ; i++){
@@ -92,7 +92,8 @@ class Superhero {
     }
  }
 
-//COMMENT 6....
+//COMMENT 6.... This block of code creates two new objects "Batman" and "Joker", and assign properties/attributes to them.
+//              Line 103 and 111 is used to push "lives" to the object "Batman" and "Joker"
 let batman = new Superhero()
 batman.name="Batman 🦸‍♂️"
 batman.isAlive = true 
@@ -116,7 +117,7 @@ console.log(`${batman.name} 💬 ${batman.taunts[1]}  \n `)
 console.log(`${joker.name} 💬 ${joker.taunts[1]}  \n `)
 
 
-//COMMENT 7....
+//COMMENT 7.... This block of code is generating new rounds and implementing attacks to the heroes
 function fight(a, b){
     console.log(" ------------- ROUND -------------> " + rounds)
     
@@ -134,7 +135,7 @@ function randomInteger(min, max) {
   }
 
 
-  //COMMENT 8....
+  //COMMENT 8.... This blocks of code makes a timer, which sets how long each fight and check if the game is still on, else it's going to quit.
   let timer = setInterval(function() {
 
     if(gameIsOn){

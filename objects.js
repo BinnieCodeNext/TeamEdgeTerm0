@@ -32,6 +32,34 @@ let object = {
         this.isEmpty =true
     }
 }
+
+let smartPhone = {
+    screen: "resolution",
+    brand: "samsung",
+    camera: 14,
+    isNew: false,
+    isCracked: true,
+    features: ["front-face camera cam", "bluetooth"],
+
+    saveData() {
+        console.log("your data was saved")
+    },
+
+    fixedPhone() {
+        this.isNew() = false;
+    },
+
+    removeFromApps() {
+        itemIdex = this.apps.indexOf(item);
+        //this.apps
+    }
+
+}
+console.log(smartPhone.brand);
+smartPhone.color = "black"
+console.log(smartPhone.color);
+
+
 //working with the object:
 object.length = 12
 object.width = 8
@@ -48,7 +76,28 @@ console.log(object)
 //*********************************  MY OBJECT *************************** */
 
 
+let computer = {
+    screen: "display",
+    brand: "Mac",
+    model: "Catalina",
+    isNew: true,
+    yearMade: 2019,
+    input: ["mouse", "keyboard"],
 
+    saveData() {
+        console.log("Your data was saved");
+    },
+
+    newToOld() {
+        this.isNew = false;
+    },
+
+    addInput(input) {
+        this.input.push(i);
+    }
+}
+
+console.log(computer.brand);
 
 
 
@@ -60,11 +109,20 @@ console.log("------------------- CHALLENGE 2 : MODIFY   -------------------")
 
 //-->TODO: Log your object you created above
 
+console.log(computer.model);
+
 
 //-->TODO: Update the object you just created  by adding new properties and values, including array elements, in this section.
 
+computer.color = "grey";
+console.log(computer.color);
+
+computer.input.push("touchscreen");
 
 //-->TODO: Log your object again and observe changes
+
+console.log(computer.input);
+
 
 
 console.log("------------------- CHALLENGE 3 : METHOD   -------------------")
@@ -72,7 +130,12 @@ console.log("------------------- CHALLENGE 3 : METHOD   -------------------")
 //-->TODO: Add at least two methods (object functions) to your object defined in Challenge 1 and invoke them here.
 //          Make your methods update your variables, or add a random number to an array, etc.
 
+console.log(computer.isNew);
+computer.newToOld();
+console.log(computer.isNew);
 
 console.log("------------------- CHALLENGE 4 : LITERALLY   -------------------")
 
 //-->TODO: Put it all together using a string literal to tell the story of your object!
+
+console.log(`I have a computer that is ${computer.brand}.`);

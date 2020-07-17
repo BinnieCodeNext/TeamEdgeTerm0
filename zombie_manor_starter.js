@@ -45,6 +45,12 @@ let rooms = [] //push any new rooms you create to this array
    bathroom.objects = ["towel" , "toothbrush", "toilet Paper", "soap"]
    bathroom.paths =["Kitchen"]
 
+   let livingRoom = new Room()
+   livingRoom.name = "Living Room"
+   livingRoom.description = "You are currently in the living room. There is blood everywhere and someone is laying in a pool of blood"
+   livingRoom.objects = ["remote", "TV", "coat rack", "key"]
+   livingRoom.paths = ["Kitchen", "Bathroom", "Backyard"]
+
 rooms.push(kitchen, bathroom) //add the rooms to the rooms array
  
 //************* START GAME *************************

@@ -21,75 +21,86 @@ console.log("------------------- CHALLENGE 1 : COUNTER -------------------")
 
 //this array logs every number between 0 and 10, using the index i
 
-for(let i = 0 ; i <=10 ; i++) {
+for (let i = 0; i <= 10; i++) {
 
-    console.log("Counter at: " + i)
+    console.log("Counter at: " + i);
    
-   }
+}
 
 //-->TODO: Write a loop that prints a happy birthday message for every year you have been alive.
 
+for (let age = 0; age <= 15; age++) {
+    console.log("Happy birthday!! " + age);
+}
 
 
-console.log("------------------- CHALLENGE 2 : ITERATOR ----------------------")
+console.log("------------------- CHALLENGE 2 : ITERATOR ----------------------");
 
 //here is an array full of colors...
-let colors = ['red' , 'violet' , 'cyan' , 'pink' , 'lime' , 'white' , 'yellow', 'black' , 'magenta', 'green', 'orange']
+let colors = ['red' , 'violet' , 'cyan' , 'pink' , 'lime' , 'white' , 'yellow', 'black' , 'magenta', 'green', 'orange'];
 
 //This is how you can iterate through an array using the length property:
-for(let i = 0 ; i< colors.length; i ++) {
+for( let i = 0 ; i< colors.length; i ++) {
 
     console.log("The color is: " + colors[i])
 }
 
 //-->TODO: Declare an array with at least 10 animals. You provide the animals.
-let animals = []
+let animal = ['Tigers' , 'Lions' , 'Zebras' , 'Horses' , 'Flamingos' , 'Bison' , 'Storks', 'Bears' , 'Pandas', 'Impalas', 'Monkeys'];
+
+//This is how you can iterate through an array using the length property:
+for (let animals = 0; animals < animal.length; animals++) {
+
+    console.log("The animals are: " + animal[animals])
+}
 
 //-->TODO: Log all the animals in the array with a for loop. 
 
 
-console.log("------------------- CHALLENGE 3 : DEBUG -------------------------")
+console.log("------------------- CHALLENGE 3 : DEBUG -------------------------");
 
 //-->TODO: fix this code so it no longer logs the last item as undefined...
-for(let i = 0 ; i<= colors.length; i ++) {
+for(let i = 0; i < colors.length; i++) {
 
-    console.log("The color is: " + colors[i])
+    console.log("The color is: " + colors[i]);
 }
 
 //-->TODO: fix this code! What could be wrong? It should print out the 5 times tables all the way to 12.
 
-console.log("Behold...the 5 times table: ")
-for(let i = 0 ; i > 12;  i++) {
-
-    console.log(` 5 x ${i} =  ` + i*5 )
+console.log("Behold...the 5 times table: ");
+for (let i = 0; i <= 12; i++) {
+    
+    console.log(` 5 x ${i} =  ` + i * 5);
      
 }
 
 //-->TODO: This function takes in an array, but needs to log the items inside. What's missing?
 
-function logArray(array){
+function logArray(array) {
+    for(let i = 0; i < array.length; i++){
 
-    for(let i = 0 ; i<array.length ; i++){
-
-        console.log(i)
+        console.log("The test array has " + array[i]);
     }
 }
 
- 
+test =  ["owo", "uwu"];
 
-console.log("------------------- CHALLENGE 4 : EVEN COUNTDOWN ------------------")
+logArray(test);
 
 
-// This makes a ranbdom number between 0-50
+console.log("------------------- CHALLENGE 4 : EVEN COUNTDOWN ------------------");
+
+
+// This makes a random number between 0-50
 let random = Math.floor(Math.random() * 51); //
 
 //this if/else statement checks if the number is even using the modulo operator (%)
 if(random % 2 == 0){
 
-    console.log(random + " is even!")
+    console.log(random + " is even!");
 }else {
 
-    console.log(random + " is odd!")
+    console.log(random + " is odd!");
 }
 
 //-->TODO: Write a function that counts BACKWARDS from 100 and logs only odd numbers
@@ -102,25 +113,37 @@ console.log("------------------- CHALLENGE 5 : Finder ------------------")
 
 //This code uses .includes() to see if an element exists in an array. It only has to appear once.
 let color = READLINE.question('Type a one word color and see if it is one of my favorite colors! >> ')
-if(colors.includes(color)){
+if(colors.includes(color)) {
 
     console.log("Yes, that color is a fav")
-}else{
+} else {
 
     console.log("No, that color is not one my favorites")
 }
 
-//-->TODO Declare an array of any strings you  want: cities, friends, movies, etc.
 
 
+
+//-->TODO Declare an array of any strings you want: cities, friends, movies, etc.
+
+let ary = ["NCT", "SKZ", "EXO", "SuperM", "TXT", "Ateez", "Shinee"];
 //-->TODO Prompt the user to "Guess" if an element is present. Store their response in a varaible
-
+let question = READLINE.question('Type a one word K-Pop group and see if it is my favorite kpop group: ');
 
 //-->TODO Write function to prompt the user and see if the element is present. IF so, print CONGRATULATIONS!
 
+function thanhbinhFinder() {
+    if (ary.includes(question)){
 
+        console.log("Yes, that's one of my favorite groups!");
+    } else{
+    
+        console.log("No, that is not one of my favorite group");
+    }
+}
 //-->TODO Call your function.
 
+thanhbinhFinder();
 
 
 console.log("------------------- CHALLENGE 6 : Nested ------------------")
@@ -144,6 +167,7 @@ for(let i = 0; i < colors.length ; i++){
 }
 
 //-->TODO Write a function that logs every letter in a sentence that a user enters.
+
 
 
 //-->CHALLENGE Let the user know which word is the shortest one!

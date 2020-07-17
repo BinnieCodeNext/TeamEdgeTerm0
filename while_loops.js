@@ -34,14 +34,33 @@ ww      ww hhhhhh  iii lll ee   e    lll oo  oo oo  oo ppp  pp s
 console.log("------------------- CHALLENGE 1 : IN YOUR PRIME -------------------")
 
  //Here is a humble while loop in action. We need a variable to hold the counter value.
-let num = 0
-while(num <= 10){
-
-console.log("example counter--> " + num)
-num++
+let num = 0;
+while (num <= 10) {
+    
+    console.log("example counter--> " + num);
+    num++;
 }
 //-->TODO: Declare a while loop that prints all the prime numbers between 0 and 1000
 
+let i;
+let number = 0;
+let count; 
+  
+  console.log(" Prime Number from 0 to 1000 are: \n"); 
+  while(number <= 1000) {
+    count = 0;
+    i = 2;
+    while (i <= number / 2) {
+      if (number % i == 0) {
+        count++;
+    }
+      i++;	
+    }	
+    if (count == 0 && number != 1 ) {
+        console.log(number);
+     }
+    number++; 
+  }
 
 
 console.log("------------------- CHALLENGE 2 : FOUND   -------------------")
@@ -51,8 +70,15 @@ let items = ["pencil" , "eraser" , "mirror" , "comb" , "spoon" , "key" , "earrin
 
 //-->TODO: Use a while loop to search the contents of an array for the key! If it exists, print "found the key!"
 
+let item = 0;
 
-
+while (item <= items.length){
+    console.log(items[item]);
+    if (items[item] === "key") {
+        console.log("found the key!");
+    }
+    item++; 
+}
 
 
 console.log("------------------- CHALLENGE 3 : BUGGIN   -------------------")
@@ -62,12 +88,16 @@ console.log("------------------- CHALLENGE 3 : BUGGIN   -------------------")
 
 //-->TODO: Make me count  2, 4, 6,..., 50
 
+
 function evenNumbersToFifty(){
+    
+    let num = 0;
+    
+    while(num < 50){
 
-    let num = 50
-    while(num <50){
+        num += 2;
 
-        console.log("number: " + num)
+        console.log("number: " + num);
 
     }
 }
@@ -114,7 +144,16 @@ console.log("------------------- CHALLENGE 4 : MATH QUIZ   -------------------")
 //         The user enters the answer. If wrong, keep prompting. If correct, say congrats!!
 //         Use this handy boolean to get you started! You will need readline_sync!
 
-let isCorrect = false
+let isCorrect = false;
+num1 = Math.floor(Math.random() * 101);
+num2 = Math.floor(Math.random() * 101);
+while (isCorrect == false) {
+    userinput = READLINE.question(`What is the sum of the numbers ${num1} and ${num2} `);
+    if (userinput == (num1 + num2)) {
+        console.log("Congrats, you are correct");    
+        isCorrect = true;
+    }
+}
 
 
 console.log("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")
@@ -123,19 +162,19 @@ console.log("------------------- CHALLENGE 5 : WHAT AM I?   -------------------"
 //         You are given to starter functions and a loop to get started! 
 //         Notice how one function calls the other and uses the returned value as the input. This is called Recursion! 
 
-let keepAsking = false
-while(keepAsking){
+let keepAsking = false;
+while(keepAsking) {
 
  //response(promptUser())
 }
 
-function promptUser(){
+function promptUser() {
 
   
 
 }
 
-function response(response){
+function response(response) {
 
   
 
