@@ -28,20 +28,11 @@
 	Tip: Don't forget to import the readline-sync module!
 
   -------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const READLINE = require("readline-sync");
+  console.log("Welcome to Magic 8 Ball");
+  
+  usrQuestion = READLINE.question("What is your question for the Magic 8 Ball? ");
+  console.log("My question is: " + usrQuestion);
 
 /* -------------------------------------------- 
 
@@ -74,24 +65,10 @@
 
   -------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  var randomNumber;
+  randomNumber = Math.floor(Math.random() * 20);
+  
+  console.log(randomNumber);
 
 /* -------------------------------------------- 
 
@@ -101,19 +78,44 @@
 	
   -------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  if (randomNumber == 0) {
+    console.log("It is certain");
+  } else if (randomNumber == 1) {
+    console.log("It is decidedly so.");
+  } else if (randomNumber == 2) {
+    console.log("Without a doubt.");
+  } else if (randomNumber == 3) {
+    console.log("Yes - definitely.");
+  } else if (randomNumber == 4) {
+    console.log("You may rely on it.");
+  } else if (randomNumber == 5) {
+    console.log("As I see it, yes.");
+  } else if (randomNumber == 6) {
+    console.log("As I see it, yes.");
+  } else if (randomNumber == 7) {
+    console.log("Outlook good.");
+  } else if (randomNumber == 8) {
+    console.log("Yes.");
+  } else if (randomNumber == 9) {
+    console.log("Signs point to yes.");
+  } else if (randomNumber == 10) {
+    console.log("Reply hazy, try again.");
+  } else if (randomNumber == 11) {
+    console.log("Ask again later");
+  } else if (randomNumber == 12) {
+    console.log("Better not tell you now.");
+  } else if (randomNumber == 13) {
+    console.log("Cannot predict now.");
+  } else if (randomNumber == 14) {
+    console.log("Concentrate and ask again.");
+  } else if (randomNumber == 15) {
+    console.log("Don't count on it.");
+  } else if (randomNumber == 16) {
+    console.log("My reply is no.");
+  } else if (randomNumber == 17) {
+    console.log("My sources say no.");
+  } else if (randomNumber == 18) {
+    console.log("Outlook not so good.");
+  } else {
+    console.log("Very doubtful.");
+  }
