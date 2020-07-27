@@ -16,33 +16,92 @@ const READLINE = require("readline-sync");
   Challenge 1: Let's try to write some basic functions.
 -------------------------------------------- */
 
- console.log("------------------- Challenge 1 -------------------")
+ console.log("------------------- Challenge 1 -------------------");
+ console.log("-------------- Challenge 1 Problem 1 -------------");
 
 // **** Challenge 1: Problem 1 ****
 // Write a function called printMessage() that prints any message you want.
+function printMessage() {
+  console.log("Seo Changbin is BABY!")
+}
 
+printMessage();
 
 // **** Challenge 1: Problem 2 ****
 // Write a function called printFiveMessages() that calls printMessage() five times.
 
+console.log("-------------- Challenge 1 Problem 2 -------------");
+
+function printFiveMessages() {
+  printMessage();
+  printMessage();
+  printMessage();
+  printMessage();
+  printMessage();
+}
+
+printFiveMessages();
 
 // **** Challenge 1: Problem 3 ****
 // Write a function called getUserInput() that asks the user if they'd like to print your message
 // once or five times. Then call one of the two functions above based on what the user decides.
 
+console.log("-------------- Challenge 1 Problem 3 -------------");
+
+function getUserInput(urMessage, howManyTimes) {
+  urMessage = READLINE.question("What would you like to say? ");
+  howManyTimes = READLINE.question("How many times? ");
+  if (howManyTimes == "1") {
+    console.log(urMessage);
+  } else if (howManyTimes == "5") {
+    console.log(urMessage);
+    console.log(urMessage);
+    console.log(urMessage);
+    console.log(urMessage);
+    console.log(urMessage);
+  } else {
+    console.log("That's not an option");
+  }
+}
+
+getUserInput();
 
 // **** Challenge 1: Problem 4 ****
 // Write a function called printGreeting() that prints a greeting message to the user.
 
+console.log("-------------- Challenge 1 Problem 4 -------------");
+
+function printGreeting() {
+  console.log("OwO, you are here! Hello!!!");
+}
+
+printGreeting();
+
+console.log("-------------- Challenge 1 Problem 5 -------------");
 
 // **** Challenge 1: Problem 5 ****
 // Write a function called printClosing() that prints a goodbye message to the user.
+
+function printClosing() {
+  console.log("UwU, thanks for joining, and hope to see you soon!!!");
+}
+
+printClosing();
 
 
 // **** Challenge 1: Problem 6 ****
 // Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 // Remember! Use the functions that you've already made. Don't hardcode anything!
 
+console.log("-------------- Challenge 1 Problem 6 -------------");
+function run(urMessage) {
+  printGreeting();
+  urMessage = READLINE.question("What would you like to say? ");
+  console.log(urMessage);
+  printClosing();
+}
+
+run();
 
 
 /* -------------------------------------------- 
@@ -52,8 +111,8 @@ Challenge 2: Functions are also able to take input and return output.
 
 -------------------------------------------- */
 
- console.log("------------------- Challenge 2 -------------------")
-
+ console.log("------------------- Challenge 2 -------------------");
+ console.log("-------------- Challenge 2 Problem 1 -------------");
 /* **** Challenge 2: Problem 1 ****
 
 Write a function called sumDouble that takes two number paramters and returns their sum.
@@ -66,12 +125,22 @@ However, if the two values are the same, the funciton will return double their s
 
 -------------------------------------------- */
 
+function sumDouble(num1, num2) {
+  num1 = READLINE.question("Enter a value for num1 ");
+  num2 = READLINE.question("Enter a value for num2 ");
+  if (num1 == num2) {
+    num3 = num1 * num2 * 2;
+    console.log(num3);
+  } else {
+    num4 = parseInt(num1) + parseInt(num2);
+    console.log(num4);
+  }
+}
+
+sumDouble();
 
 
-
-
-
-
+console.log("-------------- Challenge 2 Problem 2 -------------");
 // Make sure to test your code! Write a few function calls to make sure your code works!
 
 /* -------------------------------------------- 
@@ -87,10 +156,22 @@ Write a function called makes10 that takes two numbers, a and b, and returns tru
 
 -------------------------------------------- */
 
+function makes10(a, b) {
+  a = READLINE.question("Enter a value for a: ");
+  b = READLINE.question("Enter a value for b: ");
 
+  c = parseInt(a) + parseInt(b);
 
+  if (c == "10") {
+    console.log("Trueeee!!");
+    return true;
+  } else {
+    console.log("Falseee!!!!");
+    return false;
+  }
+}
 
-
+makes10();
 
 // Make sure to test your code! Write a few function calls to make sure your code works!
 
@@ -113,6 +194,9 @@ it should be "10:00" and weekends it should be "off".
 -------------------------------------------- */
 
 
+function alarm(dayOfWeek, Boolean trueFalse) {
+  daysOfWeek
+}
 
 
 
